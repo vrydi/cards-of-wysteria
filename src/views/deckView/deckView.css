@@ -1,0 +1,41 @@
+.deck-view .deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 12px;
+    padding: 12px;
+    grid-template-rows: repeat(auto-fit, 250px);
+}
+
+
+.split-deck {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    grid-gap: 12px;
+    padding: 12px;
+    grid-template-rows: auto;
+}
+
+.split-deck .deck-view:first-child {
+    border-right: 1px solid #ccc;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    grid-column: 1/-1;
+}
+
+.list-view .deck {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+    padding: 12px;
+}
+
+.list-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 12px;
+    align-items: center;
+}

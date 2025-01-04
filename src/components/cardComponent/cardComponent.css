@@ -1,0 +1,123 @@
+.card {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 4px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card .image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    cursor: zoom-in;
+    object-fit: cover;
+    margin: auto;
+}
+
+.card-body {
+    font-size: 12px;
+    height: 75px;
+    overflow: auto;
+    border-bottom: #ccc 1px solid;
+}
+
+.card-header {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #666;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.card-preview {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 4px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s;
+    width: 300px;
+    cursor: initial;
+}
+
+.card-preview .image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.card-preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    cursor: initial;
+    object-fit: cover;
+    margin: auto;
+}
+
+.card-preview .card-body {
+    font-size: 12px;
+    height: 150px;
+    overflow: auto;
+    border-bottom: #ccc 1px solid;
+}
+
+.card-preview .card-header {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-preview .card-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #666;
+}
+
+.selected {
+    background-color: #f0f0f0;
+}

@@ -1,0 +1,19 @@
+<div class="split-deck">
+    <div class="deck-view">
+        <h5 class="title heading-2">Cards</h5>
+        <div class="deck">
+            <CardComponent v-for="card in cards" :card="card" @card-selected="cardSelected"
+                :selected="selectedCards.includes(card)"></CardComponent>
+        </div>
+    </div>
+    <div class="list-view">
+        <h5 class="title heading-2">Current deck</h5>
+        <div class="deck">
+            <div class="list-item" v-for="card in selectedCards">
+                <CardComponent listView :card="card" @card-selected="cardRemoved">
+                </CardComponent>
+                <div>x{{card.count}}</div>
+            </div>
+        </div>
+    </div>
+</div>

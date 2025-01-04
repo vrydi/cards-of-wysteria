@@ -1,0 +1,33 @@
+<div class="card" @click.stop="select" :class="{selected: selected}">
+    <div class="card-header d-flex justify-content-between">
+        <span>{{card.title}}</span>
+        <span>{{card.cost}}</span>
+    </div>
+    <template v-if="!listView">
+        <div class="img-wrapper"><img :src="card.image" class="card-img-top" @click.stop="preview = !preview"></div>
+        <div class="card-body">
+            <p class="card-text">{{card.description}}</p>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            <span>{{card.attack}}</span>
+            <span>{{card.defense}}</span>
+        </div>
+    </template>
+</div>
+
+<div @click="preview = !preview" class="backdrop" v-if="preview">
+    <div class="card" :class="{'card-preview':preview}" @click.stop>
+        <div class="card-header d-flex justify-content-between">
+            <span>{{card.title}}</span>
+            <span>{{card.cost}}</span>
+        </div>
+        <div class="img-wrapper"><img :src="card.image" class="card-img-top"></div>
+        <div class="card-body">
+            <p class="card-text">{{card.description}}</p>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            <span>{{card.attack}}</span>
+            <span>{{card.defense}}</span>
+        </div>
+    </div>
+</div>
