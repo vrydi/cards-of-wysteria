@@ -1,4 +1,4 @@
-<div class="card" @click.stop="select" :class="{selected: selected}">
+<div class="card" @click.stop="!disabled ? select() : null" :class="{selected: selected, disabled: disabled}">
     <div class="card-header d-flex justify-content-between">
         <span>{{card.title}}</span>
         <span>{{card.cost}}</span>

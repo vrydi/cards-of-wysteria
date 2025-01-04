@@ -23,6 +23,12 @@ export default defineComponent({
     selectedCards() {
       return this.deckStore.deck
     },
+    validDeck() {
+      return this.deckStore.validDeck
+    },
+    deckMessage() {
+      return this.deckStore.deckMessage
+    },
   },
 
   methods: {
@@ -31,6 +37,10 @@ export default defineComponent({
     },
     cardRemoved(card: card) {
       this.deckStore.removeCard(card)
+    },
+    isDisabled(card: card) {
+      const index = this.selectedCards.findIndex((c) => c.id === card.id)
+      return index !== -1 && this.selectedCards[index].count >= 4
     },
   },
 })
