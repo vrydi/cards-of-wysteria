@@ -7,13 +7,13 @@ import { getAnalytics } from 'firebase/analytics'
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: 'AIzaSyAMhfsKBEodjOEwUftzY6vWEig4jJWTQWU',
-  authDomain: 'cards-of-wysteria.firebaseapp.com',
-  projectId: 'cards-of-wysteria',
-  storageBucket: 'cards-of-wysteria.firebasestorage.app',
-  messagingSenderId: '945855937791',
-  appId: '1:945855937791:web:2faa98c6b899624b1020ca',
-  measurementId: 'G-9TW7B7B5XZ',
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGE_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 }
 
 // Initialize Firebase
